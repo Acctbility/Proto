@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Dashboard</h1>
+    {% for item in data %}
+    <div class="card">
+        <p><strong>Description:</strong> {{ item[1] }}</p>
+        <p><strong>Location:</strong> Latitude {{ item[3] }}, Longitude {{ item[4] }}</p>
+        <img src="{{ item[2] }}" alt="Uploaded Image" style="max-width:200px;">
+        <button>Post to Twitter</button>
+    </div>
+    {% endfor %}
+</body>
+</html>
